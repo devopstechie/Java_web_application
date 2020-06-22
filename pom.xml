@@ -15,6 +15,35 @@
       <scope>test</scope>
     </dependency>
   </dependencies>
+  <repositories>
+     <repository>
+  	<id>devops19santhosh</id>
+  	<url>https://pkgs.dev.azure.com/devops19santhosh/_packaging/devops19santhosh/maven/v1</url>
+  	<releases>
+    		<enabled>true</enabled>
+  	</releases>
+  	<snapshots>
+    		<enabled>true</enabled>
+  	</snapshots>
+     </repository>
+  </repositories>
+
+
+  <distributionManagement>
+     <repository>
+        <id>devops19santhosh</id>
+        <url>https://pkgs.dev.azure.com/devops19santhosh/_packaging/devops19santhosh/maven/v1</url>
+        <releases>
+                <enabled>true</enabled>
+        </releases>
+        <snapshots>
+                <enabled>true</enabled>
+        </snapshots>
+     </repository>
+  
+  </distributionManagement> 
+
+
   <build>
     <finalName>java_webapplication</finalName>
   </build>
