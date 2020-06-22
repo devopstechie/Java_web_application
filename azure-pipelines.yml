@@ -22,5 +22,5 @@ steps:
     goals: 'package'
 
 
-- publish: $(System.DefaultWorkingDirectory)/bin/WebApp
+- publish: $(System.DefaultWorkingDirectory)/
   artifact: WebApp
