@@ -14,9 +14,9 @@ steps:
 - task: CmdLine@2
   inputs:
     script: |
-      touch settting.xml
-      mv setting.xml ~/.m2/
-    workingDirectory: 'src'
+      echo Write your commands here
+      
+      echo Hello world
 - task: Maven@3
   inputs:
     mavenPomFile: 'pom.xml'
