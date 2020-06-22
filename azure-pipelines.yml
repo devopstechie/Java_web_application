@@ -14,7 +14,7 @@ steps:
 - task: CmdLine@2
   inputs:
     script: |
-      echo Write your commands here
+      ll
       
       echo Hello world
 - task: Maven@3
