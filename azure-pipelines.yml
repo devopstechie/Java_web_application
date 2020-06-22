@@ -10,8 +10,8 @@ pool:
   vmImage: 'ubuntu-latest'
 
 steps:
-- script: date 
-  displayName: Get the date
+- script: ll 
+  displayName: Get the list of files
 - script: dir
   workingDirectory: $(Agent.BuildDirectory)
   displayName: List contents of a folder
