@@ -10,13 +10,23 @@ pool:
   vmImage: 'ubuntu-latest'
 
 steps:
-
+- script: date /t
+  displayName: Get the date
+- script: dir
+  workingDirectory: $(Agent.BuildDirectory)
+  displayName: List contents of a folder
+- script: |
+    set MYVAR=foo
+    set
+  displayName: Set a variable and then display all
+  env:
+    aVarFromYaml: someValue
 - task: CmdLine@2
   inputs:
     script: |
-      `ll
       
       echo Hello world
+      
 - task: Maven@3
   inputs:
     mavenPomFile: 'pom.xml'
