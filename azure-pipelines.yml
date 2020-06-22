@@ -10,23 +10,9 @@ pool:
   vmImage: 'ubuntu-latest'
 
 steps:
-- script: cp settings.xml ~/.m2/
-  displayName: copy the files
-- script: dir
-  workingDirectory: $(Agent.BuildDirectory)
-  displayName: List contents of a folder
-- script: |
-    set MYVAR=foo
-    set
-  displayName: Set a variable and then display all
-  env:
-    aVarFromYaml: someValue
-- task: CmdLine@2
+- task: MavenAuthenticate@0
   inputs:
-    script: |
-      
-      echo Hello world
-      
+    artifactsFeeds: 'myfirstartifacts'
 - task: Maven@3
   inputs:
     mavenPomFile: 'pom.xml'
