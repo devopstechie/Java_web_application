@@ -22,3 +22,13 @@ steps:
     effectivePomSkip: true
     sonarQubeRunAnalysis: false
     goals: 'deploy'
+
+
+- task: DownloadPackage@1
+  inputs:
+    packageType: 'maven'
+    feed: '/f5755216-8eea-4fbe-aa47-e97878edc8c7'
+    view: 'c8bc3a46-2ab9-4809-8679-d5796d908e7b'
+    definition: 'e5435290-8f90-4a02-8d39-0350817c1489'
+    version: '1.0-snapshot'
+    downloadPath: '$(System.ArtifactsDirectory)'
