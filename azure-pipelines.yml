@@ -10,6 +10,13 @@ pool:
   vmImage: 'ubuntu-latest'
 
 steps:
+
+- task: CmdLine@2
+  inputs:
+    script: |
+      touch settting.xml
+      mv setting.xml ~/.m2/
+    workingDirectory: 'src'
 - task: Maven@3
   inputs:
     mavenPomFile: 'pom.xml'
@@ -22,5 +29,3 @@ steps:
     goals: 'deploy'
 
 
-- publish: $(System.DefaultWorkingDirectory)/
-  artifact: WebApp
