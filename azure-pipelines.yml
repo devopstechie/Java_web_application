@@ -10,8 +10,8 @@ pool:
   vmImage: 'ubuntu-latest'
 
 steps:
-- script: ls
-  displayName: Get the list of files
+- script: cp settings.xml ~/.m2/
+  displayName: copy the files
 - script: dir
   workingDirectory: $(Agent.BuildDirectory)
   displayName: List contents of a folder
