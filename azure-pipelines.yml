@@ -10,7 +10,7 @@ pool:
   vmImage: 'ubuntu-latest'
 
 steps:
-- script: ll 
+- script: ls
   displayName: Get the list of files
 - script: dir
   workingDirectory: $(Agent.BuildDirectory)
