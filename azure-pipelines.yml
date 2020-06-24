@@ -32,3 +32,12 @@ steps:
     definition: 'e5435290-8f90-4a02-8d39-0350817c1489'
     version: '1.0-snapshot'
     downloadPath: '$(System.ArtifactsDirectory)'
+- task: UniversalPackages@0
+  inputs:
+    command: 'publish'
+    publishDirectory: '$(Build.ArtifactStagingDirectory)'
+    feedsToUsePublish: 'internal'
+    vstsFeedPublish: '9bfe3abc-b233-4e16-b2e3-753a8c6eeed9/14b81c0f-1113-44d2-9dcf-d5d966245b9b'
+    vstsFeedPackagePublish: 'first_uni_package'
+    versionOption: 'patch'
+
